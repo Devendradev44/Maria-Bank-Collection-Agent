@@ -1,0 +1,28 @@
+
+---
+
+## 🧩 Edge Cases  
+
+- ❌ Refusal to verify → Offer DOB as alternative.  
+- 💬 Debt dispute → Offer to send invoice via email.  
+- 🧾 Interest confusion → Explain fixed percentage simply.  
+- 💸 Inability to pay → Suggest smaller payments, discuss impact.  
+- 😠 Angry tone → Acknowledge emotion and remain calm.  
+
+---
+
+## 💡 Prompt Design Strategy  
+
+Maria’s system prompt emphasizes:  
+- Empathy + Professionalism  
+- Short, 1–2 sentence responses  
+- One question per turn  
+- Context retention  
+- Human-like emotional intelligence  
+
+Each iteration improved interruption handling, tone calibration, and offer sequencing.
+
+---
+
+## 🗂️ Repository Files  
+
