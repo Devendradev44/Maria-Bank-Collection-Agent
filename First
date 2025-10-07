@@ -1,0 +1,43 @@
+# Maria — AI Voice Banking Assistant  
+
+🎙️ [**Live Demo on Vapi.ai**](https://vapi.ai?demo=true&shareKey=bcdfc539-8b6d-4c98-aab5-7bcb96c731ac&assistantId=94cee14e-7454-4152-b15b-dadacb3d797f)  
+
+📄 [**Assignment PDF**](docs/Prompt_Engineer_Assignment_R0.pdf)  
+📘 [**Project Summary (PDF)**](Maria_AI_Voice_Assistant_Project.pdf)
+
+---
+
+## 🧠 Overview  
+
+**Maria** is a voice-based conversational AI agent built with **Vapi.ai** for **XYZ Bank**.  
+She acts as an empathetic collections representative, helping customers handle overdue payments through natural, respectful, and context-aware dialogue.  
+
+This project was developed as part of a **Prompt Engineering assignment**, focusing on tone design, verification logic, and human-like conversational flow.
+
+---
+
+## ✨ Features  
+
+- 🔐 **Identity Verification** — Validates users by DOB or last 4 digits of SSN.  
+- 💳 **Debt & Payment Handling** — Explains overdue amounts and offers flexible plans.  
+- 🧠 **Human-Like Conversations** — Short, natural, and emotionally intelligent.  
+- ⚡ **Real-Time Voice** — Powered by **Vapi WebSockets** for low-latency dialogue.  
+- 🌍 **Multilingual** — Supports multiple Indian languages.  
+- 🛡️ **Compliance Guardrails** — Prevents hallucinations and ensures accurate disclosures.
+
+---
+
+## 🛠️ Tech Stack  
+
+| Component | Provider | Role |
+|------------|-----------|------|
+| **Vapi.ai** | — | Voice agent orchestration |
+| **Deepgram Nova-2** | Speech-to-Text | Real-time transcription |
+| **OpenAI GPT-4o mini** | LLM | Core reasoning and dialogue |
+| **ElevenLabs TurboV2.5** | TTS | Human-like voice synthesis |
+| **Node.js / APIs** | (Planned) | Banking data integration |
+
+---
+
+## 🗣️ Ideal Conversation Flow  
+
