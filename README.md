@@ -1,90 +1,117 @@
-# Maria-Bank-Collection-Agent
-Maria — AI Voice Banking Assistant
+# Maria — AI Voice Banking Assistant  
 
-🎙️ Live Demo on Vapi - https://vapi.ai?demo=true&shareKey=bcdfc539-8b6d-4c98-aab5-7bcb96c731ac&assistantId=94cee14e-7454-4152-b15b-dadacb3d797f
+🎙️ [**Live Demo on Vapi.ai**](https://vapi.ai?demo=true&shareKey=bcdfc539-8b6d-4c98-aab5-7bcb96c731ac&assistantId=94cee14e-7454-4152-b15b-dadacb3d797f)  
 
-Maria is a voice AI assistant built for banking use-cases, designed with Vapi.ai. She can handle customer queries, verify users securely, and manage sensitive debt-related conversations with empathy and professionalism.
+📄 [**Assignment PDF**](docs/Prompt_Engineer_Assignment_R0.pdf)  
+📘 [**Project Summary (PDF)**](Maria_AI_Voice_Assistant_Project.pdf)
 
-✨ Features
+---
 
-🔐 Customer Verification – Validates customers with account number + OTP.
+## 🧠 Overview  
 
-💳 Debt & Payment Handling – Provides due balance info, politely reminds customers, and escalates to a human agent if required.
+**Maria** is a **voice-based conversational AI agent** built using **Vapi.ai**, designed for **XYZ Bank**.  
+She serves as an empathetic and professional **collections representative**, helping customers handle overdue payments with emotional intelligence and clarity.  
 
-🗣️ Conversational Tone – Human-like, empathetic, professional voice interactions.
+This project was created as part of a **Prompt Engineering assignment**, focusing on crafting system instructions, tone, and logical conversation flow to simulate real-world banking support.
 
-⚡ Real-Time Voice – Powered by WebSockets + Vapi.ai, ensuring ultra-low-latency conversations.
+---
 
-🌍 Multilingual Support – Can switch to multiple Indian languages (Marathi, Telugu, Kannada, Gujarati, etc.).
+## ✨ Features  
 
-🛡️ Secure & Compliant – Uses Vapi’s built-in guardrails, monitoring, and compliance-ready infrastructure.
+- 🔐 **Identity Verification** — Validates customers using DOB or last 4 digits of SSN.  
+- 💳 **Debt & Payment Handling** — Clearly communicates overdue details and offers flexible plans.  
+- 🧠 **Human-Like Conversations** — Uses natural, short, and emotionally intelligent responses.  
+- ⚡ **Real-Time Voice** — Powered by **Vapi WebSockets** for low-latency interactions.  
+- 🌍 **Multilingual** — Supports Indian languages like Marathi, Telugu, Kannada, and Gujarati.  
+- 🛡️ **Compliance Guardrails** — Avoids hallucinations and maintains professional tone.  
 
-🛠️ Tech Stack
+---
 
-Vapi.ai – Voice AI infrastructure (ASR → LLM → TTS pipeline)
+## 🛠️ Tech Stack  
 
-WebSockets / Streaming API – For real-time audio conversations
+| Component | Provider | Purpose |
+|------------|-----------|----------|
+| **Vapi.ai** | — | Voice AI orchestration & pipeline |
+| **Deepgram Nova-2** | STT | Speech-to-text transcription |
+| **OpenAI GPT-4o mini** | LLM | Handles reasoning & tone |
+| **ElevenLabs TurboV2.5** | TTS | Produces natural, empathetic voice |
+| **Node.js / APIs (Planned)** | — | For banking data integration |
 
-Prompt Engineering – To design Maria’s tone, empathy, and flow
+---
 
-Node.js / Express (optional) – Backend integration for APIs
+## 🗣️ Ideal Conversation Flow  
 
-Banking APIs – For account data, balance checks, and OTP verification
+Maria: Hello, this is Maria from XYZ Bank’s collections team. Am I speaking with Mr. Robin Smith?
 
-🧩 Architecture
-User (Voice) 
-   ⬇
-Maria (Vapi Voice Agent)
-   ⬇
-Speech-to-Text (ASR) → LLM (Dialogue Logic) → Text-to-Speech (TTS)
-   ⬇
-Banking APIs (Account Lookup, OTP, Transactions, Payments)
+Customer: Yes, that’s me.
 
+Maria: Great. To verify, could you share the last four digits of your Social Security Number?
 
-Vapi.ai handles real-time voice pipeline.
+Customer: 3456.
 
-Custom logic defines Maria’s flows (verification, debt handling, escalation).
+Maria: Thank you, Mr. Smith. Your account ending in 1903 has an overdue balance of seven hundred ten dollars, due April first, two thousand twenty-five. Would you like to make the full payment now?
 
-APIs/tools connect Maria to backend banking systems.
+Customer: I can’t pay that much right now.
 
-🚀 Use Cases
+Maria: That’s okay. We can offer a four-month plan at one hundred ninety-four dollars and thirty-six cents per month. Would that help?
 
-📞 Banking Support Hotline – Handles first-level queries.
+Customer: That’s still a bit high.
 
-🕒 Debt Reminders – Notifies customers about due balances in a polite, professional way.
+Maria: No problem. Based on what you can afford, we can extend it to eight months — ninety-seven dollars and eighty cents per month, at ten point two percent interest. Would that work better?
 
-🔄 24/7 Availability – Always-on support without needing human agents.
+Customer: Yes, that’s manageable.
 
-🌐 Multilingual Banking Help – Assists customers in local languages.
+Maria: Perfect. I’ve triggered a payment notification in your XYZ Bank app. Please complete it when convenient. Thank you for your cooperation.
 
-🔗 Demo
+yaml
+Copy code
 
-👉 Try Maria live here:
-Maria on Vapi.ai
+---
 
-📌 How to Run Locally
+## 🧩 Edge Cases  
 
-Clone this repo:
+- ❌ **Refuses verification** → Offer DOB as an alternative.  
+- 💬 **Disputes the debt** → Offer to send invoice for review.  
+- 🧾 **Questions interest rates** → Explain percentage clearly.  
+- 💸 **Unable to pay** → Show empathy, discuss smaller plans.  
+- 😠 **Angry or frustrated** → Stay calm, acknowledge emotion.  
 
-git clone https://github.com/your-username/maria-voice-assistant.git
-cd maria-voice-assistant
+---
 
+## 💡 Prompt Design Strategy  
 
-Install dependencies (if you’re using Node backend):
+Maria’s **system prompt** emphasizes:  
+- Empathy and professionalism  
+- One question at a time  
+- Brief, natural responses (1–2 sentences)  
+- Smooth handling of interruptions  
+- Context retention  
 
-npm install
+Iterative testing on **Vapi.ai** refined tone, timing, and offer sequencing for a lifelike experience.
 
+---
 
-Set up your Vapi API keys in .env.
+## 🗂️ Repository Files  
 
-VAPI_API_KEY=your_key_here
+/docs
+├── Prompt_Engineer_Assignment_R0.pdf # Original assignment instructions
+├── conversation-flow.md # Dialogue and logic flow
+├── final-prompt.txt # System prompt used in Vapi
+└── empathy-rules.md # Tone and language principles
+Maria_AI_Voice_Assistant_Project.pdf # Polished project summary
+README.md # This file
 
+yaml
+Copy code
 
-Run locally:
+---
 
-npm start
+## 🏁 Outcome  
 
+Maria demonstrates how **prompt engineering** and **voice AI infrastructure** can combine to create natural, secure, and emotionally intelligent customer interactions in the banking industry.  
 
-Connect with Maria via the provided web demo or integrate into a telephony service (Twilio, SIP, etc.).
+---
 
-📸 Screenshots / Demo
+## 🧾 License  
+
+MIT License © 2025 Dev  
