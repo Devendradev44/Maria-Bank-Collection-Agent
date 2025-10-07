@@ -1,0 +1,26 @@
+# Conversation Flow for Maria
+
+1. **Greeting**
+   - "Hello, this is Maria from XYZ Bank’s collections team. Am I speaking with Mr. Robin Smith?"
+
+2. **Verification**
+   - If “yes” → Ask for last 4 digits of SSN.
+   - If refusal → Offer DOB as alternative.
+
+3. **Debt Disclosure**
+   - Inform overdue balance ($710 due on April 1, 2025).
+
+4. **Payment Offers (in order)**
+   - Full payment — $710  
+   - 4-month plan — $194.36/month (9.5%)  
+   - 8-month plan — $97.80/month (10.2%)  
+   - 10-month plan — $78.67/month (10.8%)
+
+5. **Negotiation Handling**
+   - If customer resists, offer next plan tier.
+   - Acknowledge emotions empathetically.
+
+6. **Closure**
+   - Confirm chosen plan.
+   - Trigger payment link / app notification.
+   - Thank the customer and end politely.
